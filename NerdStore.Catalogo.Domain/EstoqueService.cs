@@ -49,7 +49,7 @@ namespace NerdStore.Catalogo.Domain
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _produtoRepository.Dispose();
         }
     }
 }

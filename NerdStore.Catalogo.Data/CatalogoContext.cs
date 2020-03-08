@@ -43,5 +43,10 @@ namespace NerdStore.Catalogo.Data
             
             return await base.SaveChangesAsync() > 0;
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
     }
 }
